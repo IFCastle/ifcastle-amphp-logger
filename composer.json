@@ -1,0 +1,30 @@
+{
+    "name": "ifcastle/amphp-logger",
+    "description": "Monolog integration with IfCastle Am-php.",
+    "type": "ifcastle-package",
+    "license": "MIT",
+    "keywords": ["log", "ifcastle", "monolog"],
+    "extra": {
+        "ifcastle-installer": {
+            "package": {
+                "name": "logger",
+                "bootloaders": [
+                    "IfCastle\\Amphp\\Logger\\Bootloader"
+                ]
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "IfCastle\\Amphp\\Logger\\": "src/"
+        }
+    },
+    "require": {
+        "ifcastle/application": "^0.8",
+        "monolog/monolog": "^3.7",
+        "amphp/log": "^2.0"
+    }
+}
